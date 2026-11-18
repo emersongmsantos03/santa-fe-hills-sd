@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://santafehillssd.com/sitemap.xml
