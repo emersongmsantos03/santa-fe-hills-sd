@@ -101,7 +101,7 @@ h2{font-family:"Playfair Display",serif;font-weight:500;font-size:clamp(32px,4vw
 .sold-note{font-size:13.5px;color:var(--teal);margin-top:8px;font-weight:600}
 /* Wispr Properties (off-market) */
 .wispr{background:var(--sand)}
-.wispr-box{position:relative;overflow:hidden;background:var(--navy-d);color:#fff;border-radius:24px;padding:56px;display:grid;grid-template-columns:1.4fr .8fr;gap:48px;align-items:center}
+.wispr-box{position:relative;overflow:hidden;background:var(--navy-d);color:#fff;border-radius:24px;padding:56px;display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
 .wispr-box:before{content:"";position:absolute;right:-120px;top:-120px;width:340px;height:340px;border-radius:50%;background:var(--teal);opacity:.22;filter:blur(40px)}
 .wispr-box>*{position:relative}
 .wispr-box .kicker{color:var(--aqua)}
@@ -111,10 +111,48 @@ h2{font-family:"Playfair Display",serif;font-weight:500;font-size:clamp(32px,4vw
 .wispr-list{list-style:none;margin-top:22px;display:grid;gap:10px}
 .wispr-list li{font-size:15px;color:rgba(255,255,255,.9);padding-left:28px;position:relative}
 .wispr-list li:before{content:"";position:absolute;left:0;top:7px;width:14px;height:8px;border-left:2px solid var(--sun);border-bottom:2px solid var(--sun);transform:rotate(-45deg)}
-.wispr-cta{display:flex;flex-direction:column;align-items:flex-start;gap:16px}
-.wispr-cta .btn{width:100%;justify-content:center}
-.wispr-cta a.quiet{font-size:14px;color:rgba(255,255,255,.75);text-decoration:underline;text-underline-offset:3px}
-.wispr-cta a.quiet:hover{color:#fff}
+.wispr-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.wispr-box a.quiet{display:inline-block;margin-top:16px;font-size:14px;color:rgba(255,255,255,.75);text-decoration:underline;text-underline-offset:3px}
+.wispr-box a.quiet:hover{color:#fff}
+/* phone mockup of the Wispr with Lara AI chat (wisprwithlara.com) */
+.phone{display:block;justify-self:center;width:300px;max-width:100%;aspect-ratio:300/615;background:#0b0f14;border-radius:48px;padding:11px;box-shadow:0 0 0 2px #2b3542,0 0 0 7px rgba(255,255,255,.06),0 34px 70px rgba(0,0,0,.5);text-decoration:none;transform:rotate(-2.5deg);transition:transform .35s ease}
+.phone:hover{transform:rotate(0) translateY(-4px)}
+.phone .ph-screen{position:relative;height:100%;border-radius:38px;overflow:hidden;background:#f7f5f1;display:flex;flex-direction:column;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:#001d49}
+.phone .ph-status{display:flex;justify-content:space-between;align-items:center;padding:13px 24px 6px;font-size:12.5px;font-weight:600;color:#0b0f14}
+.phone .ph-status svg{height:11px;width:auto;fill:#0b0f14;margin-left:4px}
+.phone .ph-island{position:absolute;left:50%;top:10px;width:84px;height:24px;margin-left:-42px;background:#0b0f14;border-radius:20px}
+.phone .ph-bar{display:flex;align-items:flex-end;gap:5px;padding:8px 16px 10px;background:#faf9f6;border-bottom:1px solid #ece8e1}
+.phone .ph-bar .w{height:25px;width:auto}
+.phone .ph-bar .l{height:23px;width:auto}
+.phone .ph-bar span{font-size:11px;color:#5d6b78;margin-bottom:3px}
+.phone .ph-chat{flex:1;margin:10px 10px 8px;background:#fff;border-radius:22px;padding:16px 14px;display:flex;flex-direction:column;gap:10px;overflow:hidden;box-shadow:0 1px 0 #ece8e1}
+.phone .ph-hello{display:flex;gap:10px;align-items:flex-start;margin-bottom:4px}
+.phone .ph-av{width:46px;height:46px;border-radius:50%;flex:none;margin-top:8px;box-shadow:0 0 0 3px #fff,0 4px 14px rgba(0,29,73,.18)}
+.phone .ph-hi{display:flex;align-items:flex-end;gap:5px;font-family:"Playfair Display",Georgia,serif;font-size:25px;line-height:1;color:#001d49;max-width:none}
+.phone .ph-hi img{height:32px;width:auto}
+.phone .ph-intro{font-size:12.5px;line-height:1.45;color:#5d6b78;margin-top:7px;max-width:none}
+.phone .ph-msg,.phone .ph-typing{max-width:86%;padding:9px 12px;border-radius:16px;font-size:12.5px;line-height:1.45}
+.phone .ph-msg.me{align-self:flex-end;background:#001d49;color:#fff;border-bottom-right-radius:5px}
+.phone .ph-reply{position:relative;align-self:flex-start;max-width:86%}
+.phone .ph-msg.lara{display:block;max-width:none;background:#f4f2ed;color:#1b2b38;border-bottom-left-radius:5px}
+.phone .ph-typing{position:absolute;left:0;top:0;background:#f4f2ed;border-bottom-left-radius:5px;opacity:0}
+.phone .ph-typing i{display:inline-block;width:6px;height:6px;margin:0 2px;border-radius:50%;background:#897547;animation:phDot 1s infinite}
+.phone .ph-typing i:nth-child(2){animation-delay:.15s}.phone .ph-typing i:nth-child(3){animation-delay:.3s}
+.phone .ph-chips{display:flex;gap:6px;padding:0 10px;overflow:hidden;white-space:nowrap}
+.phone .ph-chips span{flex:none;font-size:11px;font-weight:600;padding:7px 11px;border-radius:999px}
+.phone .ph-chips span:nth-child(1){background:#f0f6f2;color:#2f5b45}
+.phone .ph-chips span:nth-child(2){background:#f4f2fa;color:#4b3f8f}
+.phone .ph-chips span:nth-child(3){background:#f1f4f9;color:#001d49}
+.phone .ph-input{display:flex;align-items:center;justify-content:space-between;margin:8px 10px 0;padding:6px 6px 6px 15px;background:#fff;border:1px solid #e9e5dd;border-radius:999px;font-size:12px;color:#8a96a1}
+.phone .ph-input b{display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:#f4f2ed;color:#897547;font-size:14px}
+.phone .ph-fine{font-size:9.5px;line-height:1.3;color:#8a96a1;text-align:center;padding:7px 12px 16px;max-width:none}
+.phone.anim .ph-msg{opacity:0;transform:translateY(6px)}
+.phone.anim.play .ph-msg.me{animation:phIn .45s ease .4s forwards}
+.phone.anim.play .ph-typing{animation:phIn .3s ease 1.2s forwards,phOut .25s ease 2.8s forwards}
+.phone.anim.play .ph-msg.lara{animation:phIn .45s ease 3s forwards}
+@keyframes phIn{to{opacity:1;transform:none}}
+@keyframes phOut{to{opacity:0}}
+@keyframes phDot{0%,60%,100%{transform:none;opacity:.5}30%{transform:translateY(-3px);opacity:1}}
 .hero .btn svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2}
 /* forms */
 .forms{display:grid;grid-template-columns:1fr 1fr;gap:26px}
@@ -176,7 +214,8 @@ footer .legal{border-top:1px solid rgba(255,255,255,.12);margin-top:40px;padding
   .facts .f:nth-child(-n+2){border-bottom:1px solid var(--line)}
   .two,.agent .two,.forms,.mgrid,footer .grid,.more .grid,.wispr-box{grid-template-columns:1fr;gap:34px}
   .sold-grid{grid-template-columns:1fr 1fr}
-  .wispr-box{padding:40px 28px}
+  .wispr-box{padding:40px 24px}
+  .phone{transform:none;width:280px}
   .cards{grid-template-columns:1fr 1fr}
   section{padding:76px 0}
   .hero .wrap{padding-top:70px;padding-bottom:140px}
