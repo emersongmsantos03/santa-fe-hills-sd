@@ -83,6 +83,39 @@ h2{font-family:"Playfair Display",serif;font-weight:500;font-size:clamp(32px,4vw
 .mbox b{display:block;font-family:"Playfair Display",serif;font-weight:500;font-size:34px;color:var(--sun);line-height:1.1}
 .mbox span{font-size:12px;letter-spacing:.16em;text-transform:uppercase;opacity:.75;font-weight:600}
 .note{font-size:13px;opacity:.65;margin-bottom:34px}
+/* recently sold (filled by sales.js from the admin) */
+.sold-intro{font-size:17px;color:#33434F;max-width:680px}
+.sold-intro a{color:var(--teal);font-weight:600}
+.sold-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin:36px 0 18px}
+.sold-card{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff;display:flex;flex-direction:column}
+.sold-top{position:relative}
+.sold-img{display:block;width:100%;aspect-ratio:3/2;object-fit:cover;background:var(--sand)}
+.sold-ph{background:linear-gradient(160deg,#123A57,#1E6F86);position:relative;overflow:hidden}
+.sold-ph span{position:absolute;width:110px;height:110px;border-radius:50%;background:var(--sun);right:-20px;bottom:-46px;opacity:.9}
+.sold-tag{position:absolute;left:14px;top:14px;background:var(--navy-d);color:#fff;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:6px 11px;border-radius:999px}
+.sold-lara{position:absolute;right:14px;top:14px;background:var(--sun);color:var(--navy-d);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:6px 11px;border-radius:999px}
+.sold-body{padding:20px 22px 22px}
+.sold-price{display:block;font-family:"Playfair Display",serif;font-weight:500;font-size:28px;color:var(--navy);line-height:1.1}
+.sold-addr{font-size:15px;font-weight:600;color:var(--ink);margin-top:6px}
+.sold-facts{font-size:13.5px;color:var(--muted);margin-top:2px}
+.sold-note{font-size:13.5px;color:var(--teal);margin-top:8px;font-weight:600}
+/* Wispr Properties (off-market) */
+.wispr{background:var(--sand)}
+.wispr-box{position:relative;overflow:hidden;background:var(--navy-d);color:#fff;border-radius:24px;padding:56px;display:grid;grid-template-columns:1.4fr .8fr;gap:48px;align-items:center}
+.wispr-box:before{content:"";position:absolute;right:-120px;top:-120px;width:340px;height:340px;border-radius:50%;background:var(--teal);opacity:.22;filter:blur(40px)}
+.wispr-box>*{position:relative}
+.wispr-box .kicker{color:var(--aqua)}
+.wispr-box .kicker svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2}
+.wispr-box h2{color:#fff;margin-bottom:16px}
+.wispr-box p{font-size:17px;color:rgba(255,255,255,.78);max-width:600px}
+.wispr-list{list-style:none;margin-top:22px;display:grid;gap:10px}
+.wispr-list li{font-size:15px;color:rgba(255,255,255,.9);padding-left:28px;position:relative}
+.wispr-list li:before{content:"";position:absolute;left:0;top:7px;width:14px;height:8px;border-left:2px solid var(--sun);border-bottom:2px solid var(--sun);transform:rotate(-45deg)}
+.wispr-cta{display:flex;flex-direction:column;align-items:flex-start;gap:16px}
+.wispr-cta .btn{width:100%;justify-content:center}
+.wispr-cta a.quiet{font-size:14px;color:rgba(255,255,255,.75);text-decoration:underline;text-underline-offset:3px}
+.wispr-cta a.quiet:hover{color:#fff}
+.hero .btn svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2}
 /* forms */
 .forms{display:grid;grid-template-columns:1fr 1fr;gap:26px}
 .panel{border-radius:20px;padding:40px;background:#fff;border:1px solid var(--line);box-shadow:0 14px 40px rgba(18,58,87,.08)}
@@ -108,6 +141,8 @@ form .btn{margin-top:16px;width:100%;justify-content:center}
 .badge{background:linear-gradient(160deg,var(--navy),#1D5A78);border-radius:22px;padding:46px 38px;color:#fff;position:relative;overflow:hidden}
 .badge:after{content:"";position:absolute;right:-60px;bottom:-60px;width:200px;height:200px;border-radius:50%;background:var(--sun);opacity:.9}
 .badge img{width:100%;max-width:330px;position:relative;z-index:1}
+.badge img.lara{display:block;max-width:none;aspect-ratio:1/1;object-fit:cover;object-position:50% 22%;border-radius:16px;margin-bottom:28px;box-shadow:0 16px 40px rgba(0,0,0,.25)}
+.badge img.logo{max-width:240px}
 .badge ul{list-style:none;margin-top:28px;position:relative;z-index:1}
 .badge li{font-size:14px;padding:8px 0;border-top:1px solid rgba(255,255,255,.15)}
 .agent p{font-size:17px;color:#33434F;margin-bottom:16px}
@@ -139,7 +174,9 @@ footer .legal{border-top:1px solid rgba(255,255,255,.12);margin-top:40px;padding
   .facts .grid{grid-template-columns:repeat(2,1fr)}
   .facts .f:nth-child(2){border-right:0}
   .facts .f:nth-child(-n+2){border-bottom:1px solid var(--line)}
-  .two,.agent .two,.forms,.mgrid,footer .grid,.more .grid{grid-template-columns:1fr;gap:34px}
+  .two,.agent .two,.forms,.mgrid,footer .grid,.more .grid,.wispr-box{grid-template-columns:1fr;gap:34px}
+  .sold-grid{grid-template-columns:1fr 1fr}
+  .wispr-box{padding:40px 28px}
   .cards{grid-template-columns:1fr 1fr}
   section{padding:76px 0}
   .hero .wrap{padding-top:70px;padding-bottom:140px}
@@ -149,7 +186,7 @@ footer .legal{border-top:1px solid rgba(255,255,255,.12);margin-top:40px;padding
   body{padding-bottom:76px}
   header.top .btn{display:none}
 }
-@media (max-width:560px){.facts b{font-size:22px}.facts .f{padding:20px 18px}.cards{grid-template-columns:1fr}form .fields{grid-template-columns:1fr}.panel{padding:30px 24px}}
+@media (max-width:560px){.sold-grid{grid-template-columns:1fr}.facts b{font-size:22px}.facts .f{padding:20px 18px}.cards{grid-template-columns:1fr}form .fields{grid-template-columns:1fr}.panel{padding:30px 24px}}
 
 .blogsec{background:#fff}
 .posts{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:36px}
@@ -276,7 +313,7 @@ article.post .rich li[data-type=taskItem][data-checked=true]>div{text-decoration
     <div><h4>Contact</h4><a href="tel:+16195679584">(619) 567-9584</a><a href="mailto:lara.gabriele@exprealty.com">lara.gabriele@exprealty.com</a><a href="https://pacificfriendlyrealty.com">pacificfriendlyrealty.com</a></div>
     <div><h4>Explore</h4><a href="../index.html">Santa Fe Hills home</a><a href="../blog/index.html">Blog</a><a href="https://www.instagram.com/lara_gabriele_realtor/">Instagram</a></div>
   </div>
-  <div class="legal">Lara Gabriele, REALTOR® · CA DRE #01900255 · eXp Realty of Southern California, Inc. · CA DRE #02187306. Equal Housing Opportunity. Information is believed reliable but not guaranteed; verify school boundaries, HOA dues and taxes for any specific property. Photos: Lake San Marcos by EnneDee and Cal State San Marcos by Eamuscatuli, via <a href="https://commons.wikimedia.org/">Wikimedia Commons</a>; aerial and coast photos via <a href="https://unsplash.com/">Unsplash</a>. &copy; 2026 Pacific Friendly Realty.</div>
+  <div class="legal">Lara Gabriele, REALTOR® · CA DRE #01900255 · eXp Realty of Southern California, Inc. · CA DRE #02187306. Equal Housing Opportunity. Information is believed reliable but not guaranteed; verify school boundaries, HOA dues and taxes for any specific property. Photos: Lake San Marcos by EnneDee and Cal State San Marcos by Eamuscatuli and SR-78 in San Marcos by Downtowngal (CC BY-SA), via <a href="https://commons.wikimedia.org/">Wikimedia Commons</a>; aerial and coast photos via <a href="https://unsplash.com/">Unsplash</a>. &copy; 2026 Pacific Friendly Realty.</div>
 </div></footer>
 <div class="mobile-cta"><a class="btn btn-navy" href="tel:+16195679584">Call Lara</a><a class="btn btn-sun" href="../index.html#home-value">Home value</a></div>
 <script>(function(){try{var u="https://www.pacificfriendlyrealty.com/api/track",b=JSON.stringify({s:"santafe",u:location.href,r:document.referrer});if(!(navigator.sendBeacon&&navigator.sendBeacon(u,new Blob([b],{type:"text/plain"}))))fetch(u,{method:"POST",body:b,keepalive:true,mode:"no-cors"})}catch(e){}})();</script>
