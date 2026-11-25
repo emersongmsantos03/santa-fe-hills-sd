@@ -249,10 +249,13 @@ footer .legal{border-top:1px solid rgba(255,255,255,.12);margin-top:40px;padding
 .blog-head{background:var(--navy);color:#fff;padding:90px 0 70px}
 .blog-head h1{font-family:"Playfair Display",serif;font-weight:500;font-size:clamp(38px,5vw,60px);line-height:1.08;margin:14px 0 14px}
 .blog-head p{max-width:620px;opacity:.85;font-size:17px}
-.article-hero{height:420px;background-size:cover;background-position:center;position:relative}
-.article-hero:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(12,42,64,.85),rgba(12,42,64,.15) 60%)}
-.article-hero .wrap{position:relative;z-index:1;height:100%;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:44px;color:#fff}
-.article-hero h1{font-family:"Playfair Display",serif;font-weight:500;font-size:clamp(32px,4.4vw,52px);line-height:1.1;max-width:860px;margin-top:12px}
+.article-hero{background:var(--navy);color:#fff;padding:72px 0 60px}
+.article-hero.has-cover{padding-bottom:150px}
+.article-hero .wrap{max-width:900px}
+.article-hero h1{font-family:"Playfair Display",serif;font-weight:500;font-size:clamp(30px,4.4vw,50px);line-height:1.12;margin-top:14px;overflow-wrap:break-word}
+.pfr-cover{max-width:1000px;margin:-110px auto 0;padding:0 28px;position:relative}
+.pfr-cover img{display:block;width:100%;height:auto;max-height:640px;object-fit:cover;border-radius:18px;background:var(--sand);box-shadow:0 24px 60px rgba(12,42,64,.2)}
+.pfr-cover+article.post{padding-top:48px}
 .crumbs{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--aqua);font-weight:600}
 .crumbs a{text-decoration:none}
 article.post{max-width:740px;margin:0 auto;padding:60px 28px 30px}
@@ -338,7 +341,8 @@ article.post .rich li[data-type=taskItem][data-checked=true]>div{text-decoration
 .pfr-share a,.pfr-share button{display:inline-flex;align-items:center;justify-content:center;height:36px;padding:0 14px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--navy);font:600 13px Montserrat,sans-serif;text-decoration:none;cursor:pointer}
 .pfr-share a:hover,.pfr-share button:hover{background:var(--navy);color:#fff;border-color:var(--navy)}
 @media (max-width:640px){article.post .rich img[data-align]{float:none!important;margin:22px auto!important}article.post .rich img[data-size=small],article.post .rich img[data-size=medium]{width:70%}article.post .rich img[data-size=large]{width:100%}article.post .rich figure[data-align]:not([data-size=full]){float:none;margin:22px auto}article.post .rich figure[data-size=small],article.post .rich figure[data-size=medium]{width:70%}article.post .rich figure[data-size=large]{width:100%}article.post .rich div[data-type=map] iframe{height:260px}article.post .rich div[data-type=callout]{padding:18px 20px}article.post .rich div[data-type=callout][data-emoji]{padding-left:50px}}
-@media (max-width:900px){.posts,.posts.three{grid-template-columns:1fr}.article-hero{height:320px}}
+@media (max-width:900px){.posts,.posts.three{grid-template-columns:1fr}}
+@media (max-width:640px){.article-hero{padding:48px 0 40px}.article-hero.has-cover{padding-bottom:84px}.article-hero .wrap,.pfr-cover{padding-left:16px;padding-right:16px}.pfr-cover{margin-top:-60px}.pfr-cover img{border-radius:12px}article.post{padding-left:16px;padding-right:16px}.pfr-cover+article.post{padding-top:32px}.byline{flex-wrap:wrap;gap:2px 8px}}
 </style>
 </head>
 <body>
